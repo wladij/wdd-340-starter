@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /******* Change Box Model ***************/
 *,
 *:before,
@@ -9,7 +11,7 @@ body {
   background-image: url('/images/site/small_check.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  
+  font-family: 'Roboto', 'Sans Serif';
 }
 
 #wrapper {
@@ -125,7 +127,7 @@ nav ul li:hover {
 }
 
 .upgrade-item {
-  background-color: #00b8e6; 
+  background-color: #b2e1ec; 
   padding: 10px;
   text-align: center;
   border-radius: 8px;
