@@ -65,3 +65,39 @@ Util.buildClassificationGrid = async function(data){
     }
     return grid
   }
+
+
+  Util.buildDetailView = async function(vehicle) {
+    const priceFormatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(vehicle.inv_price)
+    const milesFormatted = new Intl.NumberFormat('en-US').format(vehicle.inv_miles)
+  
+    let detail = `
+      <div class="vehicle-detail">
+        <img src="${vehicle.inv_image}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model}">
+        <div class="vehicle-info">
+          <h2>${vehicle.inv_year} ${vehicle.inv_make} ${vehicle.inv_model}</h2>
+          <h3>${priceFormatted}</h3>
+          <p><strong>Description:</strong> ${vehicle.inv_description}</p>
+          <p><strong>Color:</strong> ${vehicle.inv_color}</p>
+          <p><strong>Miles:</strong> ${milesFormatted}</p>
+        </div>
+      </div>
+    `
+    return detail
+  }
+  
+
+  Util.buildDetailView = async function(vehicle){
+    let view = '<section id="vehicle-detail">'
+    view += `<h2>${vehicle.inv_make} ${vehicle.inv_model} (${vehicle.inv_year})</h2>`
+    view += `<img src="${vehicle.inv_image}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model}" />`
+    view += `<p>${vehicle.inv_description}</p>`
+    view += `<ul>`
+    view += `<li><strong>Price:</strong> $${new Intl.NumberFormat('en-US').format(vehicle.inv_price)}</li>`
+    view += `<li><strong>Color:</strong> ${vehicle.inv_color}</li>`
+    view += `<li><strong>Mileage:</strong> ${new Intl.NumberFormat('en-US').format(vehicle.inv_miles)} miles</li>`
+    view += `</ul>`
+    view += '</section>'
+    return view
+  }
+  

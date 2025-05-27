@@ -45,16 +45,16 @@ nav ul{
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
 }
-nav li{
+nav li a{
   text-decoration: none;
   color: white;
-  padding: 10px 15px;
+  padding: 10px;
   transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
   background-color: #ddd;
   color: black;
 }
@@ -148,7 +148,14 @@ nav ul li:hover {
   padding-left: 20px;
 }
 
+#inv-display li{
+  margin: 20px;
+}
 
+.namePrice h2 a{
+  text-decoration: none;
+  color: black;
+}
 
 @media (max-width: 768px) {
  body{
@@ -174,4 +181,32 @@ nav ul li:hover {
   flex-direction: column-reverse;
   gap: 0px;
 }
+}
+
+
+.vehicle-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.vehicle-detail img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  flex: 1 1 300px;
+  border-radius: 8px;
+}
+
+.vehicle-info {
+  flex: 1 1 300px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .vehicle-detail {
+    flex-direction: column;
+    align-items: center;
+  }
 }
