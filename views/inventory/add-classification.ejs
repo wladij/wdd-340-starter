@@ -1,0 +1,23 @@
+<main>
+    <h1>Add Classification</h1>
+  
+    <% if (typeof errors !== "undefined" && errors.length > 0) { %>
+      <ul class="error">
+        <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+    <% } %>
+  
+    <% if (typeof message !== "undefined" && message.length > 0) { %>
+      <% message.forEach(msg => { %>
+        <div class="notice"><%= msg %></div>
+      <% }) %>
+    <% } %>
+  
+    <form action="/inv/add-classification" method="post">
+      <label for="classification_name">Classification Name</label>
+      <input type="text" id="classification_name" name="classification_name" required pattern="^[a-zA-Z0-9]+$">
+      <button type="submit">Add Classification</button>
+    </form>
+  </main>

@@ -345,3 +345,77 @@ form.form button:hover {
     transform: translateY(0);
   }
 }
+
+
+.new-vehicle {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-vehicle h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.new-vehicle form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-vehicle label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.new-vehicle input[type="text"],
+.new-vehicle input[type="number"],
+.new-vehicle select,
+.new-vehicle textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.new-vehicle textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.new-vehicle button {
+  padding: 0.75rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.new-vehicle button:hover {
+  background-color: #005fa3;
+}
+
+.new-vehicle .error {
+  background-color: #ffe5e5;
+  border: 1px solid #ff9999;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #b00000;
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .new-vehicle main {
+    padding: 1rem;
+  }
+}
